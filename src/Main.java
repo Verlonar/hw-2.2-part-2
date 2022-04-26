@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Mechanism> mechanisms = new ArrayList<>();
+        ArrayList<MechanismService> mechanisms = new ArrayList<>();
 
         mechanisms.add(new Car("car1", 4));
         mechanisms.add(new Car("car2", 4));
