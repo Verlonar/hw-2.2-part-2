@@ -1,17 +1,16 @@
-public class Truck {
+public class Truck extends Mechanism implements MechanismService {
 
-    public String modelName;
-    public int wheelsCount;
-
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
 
-    public void checkEngine() {
+    @Override
+    public void check() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку");
+        }
         System.out.println("Проверяем двигатель");
-    }
-
-    public void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }
 }
